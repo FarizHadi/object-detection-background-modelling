@@ -2,7 +2,7 @@
 
 ## Background Modelling Techniques
 
-This document explains the theoretical background and implementation details of the three experiments.
+This document explains the theoretical background and implementation.
 
 ## Experiment 1: Consecutive Frame Differencing
 
@@ -19,11 +19,11 @@ Frame differencing is the simplest background subtraction technique. It detects 
 6. Find contours and convert to bounding boxes
 
 **Mathematical Formulation:**
-Grayscale conversion:
+- Grayscale conversion:
 Gray(x,y) = 0.299R(x,y) + 0.587G(x,y) + 0.114*B(x,y)
-Absolute difference:
+- Absolute difference:
 D(x,y,t) = |I(x,y,t) - I(x,y,t-1)|
-Binary mask:
+- Binary mask:
 B(x,y,t) = {
 255  if D(x,y,t) > T
 0    otherwise
